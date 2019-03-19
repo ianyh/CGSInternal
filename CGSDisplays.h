@@ -72,6 +72,9 @@ CG_EXTERN CGError CGSGetDisplaysWithPoint(const CGPoint *point, int maxDisplayCo
 /// Gets the displays which contain a rect. Note that multiple displays can have the same bounds - think mirroring.
 CG_EXTERN CGError CGSGetDisplaysWithRect(const CGRect *point, int maxDisplayCount, CGDirectDisplayID *outDisplays, int *outDisplayCount);
 
+/// Gets the best display which contains a rect.
+CG_EXTERN CFStringRef CGSCopyBestManagedDisplayForRect(CGSConnectionID cid, CGRect rect);
+
 /// Gets the bounds for the display. Note that multiple displays can have the same bounds - think mirroring.
 CG_EXTERN CGError CGSGetDisplayRegion(CGDirectDisplayID display, CGSRegionRef *outRegion);
 CG_EXTERN CGError CGSGetDisplayBounds(CGDirectDisplayID display, CGRect *outRect);
